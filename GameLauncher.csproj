@@ -1,0 +1,118 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net8.0-windows</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <UseWPF>true</UseWPF>
+        <ApplicationIcon>Assets\Images\favicon.ico</ApplicationIcon>
+        <PublishSingleFile>true</PublishSingleFile>
+        <RuntimeIdentifier>win-x86</RuntimeIdentifier>
+        <SelfContained>true</SelfContained>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="K4os.Compression.LZ4.Streams" Version="1.3.8" />
+      <PackageReference Include="NetSparkle.New" Version="0.19.2" />
+      <PackageReference Include="NetSparkleUpdater.UI.WPF" Version="3.0.0-preview20240716002" />
+      <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+      <PackageReference Include="NuGet.CommandLine" Version="6.11.0">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
+      <PackageReference Include="squirrel.windows" Version="2.0.1" />
+      <PackageReference Include="WindowsAPICodePack-Core" Version="1.1.2" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Assets\Images\Background.webp" />
+      <None Remove="Assets\Images\Background\Background_960x540.png" />
+      <None Remove="Assets\Images\Background\Background_1024x640.png" />
+      <None Remove="Assets\Images\Background\Background_1366x768.png" />
+      <None Remove="Assets\Images\Background\Background_1920x1080.png" />
+      <None Remove="Assets\Images\Background_1024x640.png" />
+      <None Remove="Assets\Images\Button.png" />
+      <None Include="Assets\Images\logo_hover.png" />
+      <Resource Include="Assets\Images\Backgrounds\Background_Small.png" />
+      <Resource Include="Assets\Images\Backgrounds\Background_Window.png" />
+      <Resource Include="Assets\Images\Backgrounds\Frame_1280x720.png" />
+      <Resource Include="Assets\Images\Backgrounds\Frame_1920x1080.png" />
+      <None Remove="Assets\Images\EmptyBar.png" />
+      <Resource Include="Assets\Images\Buttons\Button.png" />
+      <Resource Include="Assets\Images\Buttons\Close.png" />
+      <Resource Include="Assets\Images\Buttons\Minimize.png" />
+      <Resource Include="Assets\Images\EmptyBar.png" />
+      <None Remove="Assets\Images\Exit.png" />
+      <Resource Include="Assets\Images\FillBar.png" />
+      <None Remove="Assets\Images\Minimize.png" />
+      <None Remove="Assets\Images\Background_Small.png" />
+      <None Remove="Assets\Images\Anarchy_Background.webp" />
+      <None Remove="Assets\Images\Anarchy_Background.png" />
+      <None Remove="Assets\Images\Close.png" />
+      <None Remove="Assets\Images\Maximize.png" />
+      <None Remove="Assets\Images\Frame_1280x720.png" />
+      <None Remove="Assets\Images\Frame_1920x1080.png" />
+      <None Remove="Assets\Images\Background_Window.png" />
+      <None Remove="Assets\Images\Browse.png" />
+      <None Remove="Assets\Images\Buttons\Button_Hover.png" />
+      <Resource Include="Assets\Images\Buttons\Button_Hover.png" />
+      <None Remove="Assets\Images\Buttons\Browse_Hover.png" />
+      <None Remove="Assets\Images\Logo_Hover.png" />
+      <None Remove="Assets\Images\Buttons\Close_Hover.png" />
+      <Resource Include="Assets\Images\Buttons\Close_Hover.png" />
+      <None Remove="Assets\Images\Buttons\Maximize_Hover.png" />
+      <None Remove="Assets\Images\Buttons\Minimize_Hover.png" />
+      <Resource Include="Assets\Images\Buttons\Minimize_Hover.png" />
+      <None Remove="Assets\Images\logo.png" />
+      <None Remove="Assets\Images\Buttons\social\discord.png" />
+      <Resource Include="Assets\Images\Buttons\social\discord.png" />
+      <None Remove="Assets\Images\Buttons\social\facebook.png" />
+      <Resource Include="Assets\Images\Buttons\social\facebook.png" />
+      <None Remove="Assets\Images\Buttons\social\instagram.png" />
+      <Resource Include="Assets\Images\Buttons\social\instagram.png" />
+      <None Remove="Assets\Images\Buttons\social\tiktok.png" />
+      <Resource Include="Assets\Images\Buttons\social\tiktok.png" />
+      <None Remove="Assets\Images\Buttons\social\twitch.png" />
+      <Resource Include="Assets\Images\Buttons\social\twitch.png" />
+      <None Remove="Assets\Images\Buttons\social\twitter.png" />
+      <Resource Include="Assets\Images\Buttons\social\twitter.png" />
+      <None Remove="Assets\Images\Buttons\social\x.png" />
+      <Resource Include="Assets\Images\Buttons\social\x.png" />
+      <None Remove="Assets\Images\Buttons\social\youtube.png" />
+      <Resource Include="Assets\Images\Buttons\social\youtube.png" />
+      <None Remove="Assets\Images\Backgrounds\background.jpg" />
+      <Resource Include="Assets\Images\Backgrounds\background.jpg" />
+      <None Remove="Assets\Images\Backgrounds\Anarchy_Background.png" />
+      <None Remove="Assets\Images\Anarchy_Background.jpg" />
+      <None Remove="Assets\Images\Buttons\Maximize.png" />
+      <None Remove="Assets\Images\Buttons\Button_Disabled.png" />
+      <Resource Include="Assets\Images\Buttons\Button_Disabled.png" />
+      <None Remove="Assets\Images\logo-hover.png" />
+      <None Remove="Assets\Images\Buttons\social\youtube_hover.png" />
+      <Resource Include="Assets\Images\Buttons\social\youtube_hover.png" />
+      <None Remove="Assets\Images\Buttons\social\x_hover.png" />
+      <Resource Include="Assets\Images\Buttons\social\x_hover.png" />
+      <None Remove="Assets\Images\Buttons\social\twitter_hover.png" />
+      <Resource Include="Assets\Images\Buttons\social\twitter_hover.png" />
+      <None Remove="Assets\Images\Buttons\social\twitch_hover.png" />
+      <Resource Include="Assets\Images\Buttons\social\twitch_hover.png" />
+      <None Remove="Assets\Images\Buttons\social\tiktok_hover.png" />
+      <Resource Include="Assets\Images\Buttons\social\tiktok_hover.png" />
+      <None Remove="Assets\Images\Buttons\social\instagram_hover.png" />
+      <Resource Include="Assets\Images\Buttons\social\instagram_hover.png" />
+      <None Remove="Assets\Images\Buttons\social\facebook_hover.png" />
+      <Resource Include="Assets\Images\Buttons\social\facebook_hover.png" />
+      <None Remove="Assets\Images\Buttons\social\discord_hover.png" />
+      <Resource Include="Assets\Images\Buttons\social\discord_hover.png" />
+    </ItemGroup>
+
+  <ItemGroup>
+      <Page Update="MainWindow.xaml">
+        <Generator>MSBuild:Compile</Generator>
+        <XamlRuntime>Wpf</XamlRuntime>
+        <SubType>Designer</SubType>
+      </Page>
+    </ItemGroup>
+
+</Project>

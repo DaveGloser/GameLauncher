@@ -1,0 +1,379 @@
+﻿<Window
+    AllowsTransparency="True"
+    Background="Transparent"
+    FontFamily="Candara"
+    FontSize="15"
+    FontWeight="Bold"
+    Height="617"
+    MinHeight="540"
+    MinWidth="1024"
+    Title="Anarchy Launcher"
+    WindowStartupLocation="CenterScreen"
+    Width="1097"
+    WindowStyle="None"
+    x:Class="GameLauncher.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Window.Resources>
+        <ImageBrush
+            ImageSource="Assets/Images/Backgrounds/Frame_1280x720.png"
+            Stretch="Fill"
+            x:Key="WindowFrame" />
+        <ImageBrush
+            ImageSource="Assets/Images/Backgrounds/Anarchy_Background.jpg"
+            Stretch="Fill"
+            x:Key="WindowBackGroundBrush" />
+
+        <Style TargetType="Button" x:Key="WindowButtonStyle">
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="BorderBrush" Value="Transparent" />
+            <Setter Property="Width" Value="40" />
+            <Setter Property="Height" Value="30" />
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#FF555555" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+
+    <Grid Background="{StaticResource WindowBackGroundBrush}">
+        <Grid Background="{StaticResource WindowFrame}">
+            <Grid Margin="9">
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Button
+                        BorderThickness="0"
+                        Click="ActionButton_Click"
+                        Content="Install"
+                        FontSize="39"
+                        FontWeight="Bold"
+                        Foreground="#EAD796"
+                        Height="90"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Width="263"
+                        x:Name="actionButton">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Grid>
+                                    <Image
+                                        Name="ButtonImage"
+                                        Source="Assets/Images/Buttons/Button.png"
+                                        Stretch="Fill" />
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                </Grid>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Source" TargetName="ButtonImage" Value="Assets/Images/Buttons/Button_Hover.png" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                </StackPanel>
+                <StackPanel
+                    Grid.Row="3"
+                    HorizontalAlignment="Center"
+                    Margin="0,0,0,10"
+                    Orientation="Horizontal"
+                    VerticalAlignment="Bottom">
+                    <StackPanel.Resources>
+                        <Style TargetType="{x:Type Button}">
+                            <Setter Property="Margin" Value="0,0,0,0" />
+                        </Style>
+                    </StackPanel.Resources>
+                    <Button
+                        Background="Transparent"
+                        Click="Discord"
+                        Height="50"
+                        Margin="0,0,5,0"
+                        Width="50">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Grid>
+                                    <Image
+                                        Name="ButtonImage"
+                                        Source="Assets/Images/Buttons/social/discord.png"
+                                        Stretch="Fill" />
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                </Grid>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Source" TargetName="ButtonImage" Value="Assets/Images/Buttons/social/discord_hover.png" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                    <Button
+                        Background="Transparent"
+                        Click="Youtube"
+                        Height="50"
+                        Margin="0,0,5,0"
+                        Width="50">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Grid>
+                                    <Image
+                                        Name="ButtonImage"
+                                        Source="Assets/Images/Buttons/social/youtube.png"
+                                        Stretch="Fill" />
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                </Grid>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Source" TargetName="ButtonImage" Value="Assets/Images/Buttons/social/youtube_hover.png" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                    <Button
+                        Background="Transparent"
+                        Click="Facebook"
+                        Height="50"
+                        Margin="0,0,5,0"
+                        Width="50">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Grid>
+                                    <Image
+                                        Name="ButtonImage"
+                                        Source="Assets/Images/Buttons/social/facebook.png"
+                                        Stretch="Fill" />
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                </Grid>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Source" TargetName="ButtonImage" Value="Assets/Images/Buttons/social/facebook_hover.png" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                    <Button
+                        Background="Transparent"
+                        Click="Twitter"
+                        Height="50"
+                        Margin="0,0,5,0"
+                        Width="50">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Grid>
+                                    <Image
+                                        Name="ButtonImage"
+                                        Source="Assets/Images/Buttons/social/x.png"
+                                        Stretch="Fill" />
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                </Grid>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Source" TargetName="ButtonImage" Value="Assets/Images/Buttons/social/x_hover.png" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                    <Button
+                        Background="Transparent"
+                        Click="Instagram"
+                        Height="50"
+                        Margin="0,0,5,0"
+                        Width="50">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Grid>
+                                    <Image
+                                        Name="ButtonImage"
+                                        Source="Assets/Images/Buttons/social/instagram.png"
+                                        Stretch="Fill" />
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                </Grid>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Source" TargetName="ButtonImage" Value="Assets/Images/Buttons/social/instagram_hover.png" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                    <Button
+                        Background="Transparent"
+                        Click="TikTok"
+                        Height="50"
+                        Margin="0,0,5,0"
+                        Width="50">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Grid>
+                                    <Image
+                                        Name="ButtonImage"
+                                        Source="Assets/Images/Buttons/social/tiktok.png"
+                                        Stretch="Fill" />
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                </Grid>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Source" TargetName="ButtonImage" Value="Assets/Images/Buttons/social/tiktok_hover.png" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                    <Button
+                        Background="Transparent"
+                        Click="Twitch"
+                        Height="50"
+                        Width="50">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Grid>
+                                    <Image
+                                        Name="ButtonImage"
+                                        Source="Assets/Images/Buttons/social/twitch.png"
+                                        Stretch="Fill" />
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                </Grid>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Source" TargetName="ButtonImage" Value="Assets/Images/Buttons/social/twitch_hover.png" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                </StackPanel>
+                <StackPanel>
+                    <Button
+                        BorderThickness="0"
+                        Height="65"
+                        HorizontalAlignment="Left"
+                        Margin="10"
+                        Width="226">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Grid>
+                                    <Image
+                                        Name="ButtonImage"
+                                        Source="Assets/Images/logo-main.png"
+                                        Stretch="Fill" />
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                </Grid>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Source" TargetName="ButtonImage" Value="Assets/Images/logo-hover.png" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                </StackPanel>
+                <Grid
+                    Background="Transparent"
+                    Height="35"
+                    MouseLeftButtonDown="TitleBar"
+                    VerticalAlignment="Top">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="2*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    
+                    <StackPanel
+                        Grid.Column="2"
+                        HorizontalAlignment="Right"
+                        Margin="0,0,1.3,0"
+                        Orientation="Horizontal"
+                        VerticalAlignment="Top">
+                        <Button
+                            Click="Minimaze"
+                            Height="32"
+                            Style="{StaticResource WindowButtonStyle}"
+                            Width="32"
+                            x:Name="MinimizeButton">
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <Grid>
+                                        <Image
+                                            Name="ButtonImage"
+                                            Source="Assets/Images/Buttons/Minimize.png"
+                                            Stretch="Fill" />
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                    </Grid>
+                                    <ControlTemplate.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter Property="Source" TargetName="ButtonImage" Value="Assets/Images/Buttons/Minimize_Hover.png" />
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
+
+                        <Button
+                            Click="Close"
+                            Height="32"
+                            Style="{StaticResource WindowButtonStyle}"
+                            Width="32"
+                            x:Name="CloseButton">
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <Grid>
+                                        <Image
+                                            Name="ButtonImage"
+                                            Source="Assets/Images/Buttons/Close.png"
+                                            Stretch="Fill" />
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                    </Grid>
+                                    <ControlTemplate.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter Property="Source" TargetName="ButtonImage" Value="Assets/Images/Buttons/Close_Hover.png" />
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
+                    </StackPanel>
+                </Grid>
+
+                <Grid Margin="0,40,0,0">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+
+                        <ProgressBar
+                            Grid.ColumnSpan="3"
+                            Grid.Row="2"
+                            Height="30"
+                            HorizontalAlignment="Center"
+                            Maximum="100"
+                            Minimum="0"
+                            Value="0"
+                            VerticalAlignment="Top"
+                            Visibility="Collapsed"
+                            Width="900"
+                            x:Name="progressBar">
+                            <ProgressBar.Background>
+                                <ImageBrush ImageSource="Assets/Images/EmptyBar.png" Stretch="Fill" />
+                            </ProgressBar.Background>
+                            <ProgressBar.Foreground>
+                                <ImageBrush ImageSource="Assets/Images/FillBar.png" Stretch="Fill" />
+                            </ProgressBar.Foreground>
+                        </ProgressBar>
+                    </Grid>
+                </Grid>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>
